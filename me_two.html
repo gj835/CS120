@@ -1,9 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CS120 me_two</title>
+    <title>CS120 Problem Set 1-2 CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1 {
+            color: #007BFF;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #a121e6;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .list-container {
+            border: 2px solid #000000;
+            width: 50%;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Coming Soon</h1>
+    <!-- Your name in a heading 1 tag. -->
+    <h1>Jin Gan</h1>
+    <hr/>
+    
+    <p style="width: 50%">
+    There are a few trip I took to ski since last year. I just learned skiing 
+    and I am in love with this sport, 
+    eventhough I sill can't finish a black lane (the most difficult one) by myself, 
+    I feel like I am getting addicted to it now.
+    </p>
+    <hr/>
+    
+    <h2>3 favorite pet names</h2>
+    <div class="list-container">
+        <ul>
+            <li>A dog named Beta</li>
+            <li>A cat named Alpha</li>
+            <li>A cat named Mufasa</li>
+        </ul>
+    </div>
+    <hr/>
+    
+    <div>
+        <h2>My favorite restaurant in Boston Area(I'll give you some for choose)</h2>
+        <h3><a href="https://www.noahskitchen.us/" target="_blank">Noah's Kitchen</a></h3>
+        <p>Authentic Sichuan style Chinese dishes, can be spicy. But generally if I want to have some chinese food this is where I would go.</p>
+        <h3><a href="https://umamiomakase.com/" target="_blank">Umami Omakase</a></h3>
+        <p>Omakase style Japanese restaurant, they have the fresh fish imported everyday, pricy but worth it.</p>
+    </div>
+
+    <hr/>
+
+    <div>
+        <h3>An image of my favorite food</h3>
+        <div>
+            <!-- Display your favorite food image in a div using a background image.  
+                Place the explanatory text in a div that is adjacent to it. -->
+            <img src="food.png" alt="Claypot rice" algin="left">
+            I love to have Claypot rice occasionally. 
+            Esspecially the bottom of the rice is overcooked and they will become crispy, 
+            I always eat that part first then mix the rest of the rice with the meat and sauce.
+        </div>
+        <br clear="all" />
+    </div>
+    
+    <hr/>
+    
+    <div>
+        <h3>4 of my favorite books</h3>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Cover</th>
+                <th>Author</th>
+                <th>Summary</th>
+            </tr>
+            <tr>
+                <td>Operating Systems: Internals and Design Principles </td>
+                <td><img src="Operating Systems.png" alt="Operating Systems"></td>
+                <td>William Stallings</td>
+                <td>"Operating Systems: Internals and Design Principles" by William Stallings 
+                    provides a comprehensive and detailed examination of the principles 
+                    and inner workings of operating systems.</td>
+            </tr>
+            <tr>
+                <td>Cracking the Coding Interview</td>
+                <td><img src="Cracking the Coding Interview.png" alt="Cracking the Coding Interview"></td>
+                <td>Gayle Laakmann McDowell</td>
+                <td>Cracking the Coding Interview is here to help you through this process, 
+                    teaching you what you need to know and enabling you to perform at your very best.</td>
+            </tr>
+            <tr>
+                <td>8 Billion and Counting: How Sex, Death, and Migration Shape Our World</td>
+                <td><img src="8 Billion and Counting How Sex, Death, and Migration Shape Our World.png" alt="8 Billion and Counting"></td>
+                <td>Jennifer D. Sciubba</td>
+                <td>A provocative description of the power of population change to create the conditions for societal transformation.</td>
+            </tr>
+            <tr>
+                <td>The Three-Body Problem</td>
+                <td><img src="The Three-Body Problem.png" alt="The Three-Body Problem"></td>
+                <td>Liu Cixin</td>
+                <td>"The Three-Body Problem" by Liu Cixin is a science fiction novel that explores 
+                    humanity's first contact with an alien civilization and the complex challenges it presents.</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
