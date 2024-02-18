@@ -3,28 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Cover Band - Contact</title>
+    <title>The Cover Band</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- For social icons -->
 </head>
 <body>
-    <header>The Cover Band</header>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="performers.html">Performers</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <div class="sidebar">
-        <!-- Sidebar content (e.g., upcoming shows, recent news) -->
-    </div>
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="pic/logo_smail.png" alt="Band Logo" class="logo">
+            </a>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="performers.html" id="selected">Performers</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <style>
+        .performers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            color: white;
+        }
+
+        .performer {
+            flex-basis: 45%;
+            margin-bottom: 20px;
+        }
+
+        .performer img {
+            max-width: 90%;
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            .performer {
+                flex-basis: 100%;
+            }
+        }
+
+    </style>
+
     <div class="main-content">
-        <!-- Main content specific to each page -->
+        <div class="performers">
+            <div class="performer">
+                <img src="pic/profile singer.jpg">
+                <p>Singer: Meet our lead vocalist, the enchanting voice behind our melodies. With a passion that ignites with every note, she captivates audiences, weaving stories through song. Her dynamic range and emotive performances are the heartbeat of our band.</p>
+            </div>
+            <div class="performer">
+                <img src="pic/profile guitar.jpg">
+                <p>Guitar: On guitar, we have the incredibly talented virtuoso whose fingers dance effortlessly across the strings. Her solos are electric, blending skill and soul to create unforgettable musical moments. She's not just a guitarist; she's a storyteller, painting landscapes with her melodies.</p>
+            </div>
+            <div class="performer">
+                <img src="pic/profile bass.jpg">
+                <p>Bass: Holding down the groove is our bass player, the foundation of our sound. His rhythms are the undercurrent that drives our music, bringing depth and cohesion to our tunes. With each pluck, he ensures the band's heartbeat is felt, not just heard.</p>
+            </div>
+            <div class="performer">
+                <img src="pic/profile drum.jpg">
+                <p>Drum: Behind the drums is the powerhouse of our band, a master of rhythm and timing. His beats are the backbone of our performances, providing the explosive energy that fuels our shows. With precision and flair, he's not just playing the drums; he's orchestrating the pulse of every song.</p>
+            </div>
+        </div>
     </div>
+
     <div class="social-buttons">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
     </div>
+
     <footer>© 2024 The Cover Band</footer>
 </body>
 </html>

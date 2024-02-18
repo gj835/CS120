@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cover Band</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- For social icons -->
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="pic/logo_smail.png" alt="Band Logo" class="logo">
+            </a>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="performers.html">Performers</a>
+                <a href="schedule.html" id="selected">Schedule</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        @media screen and (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr { 
+                border: 1px solid #ccc; 
+            }
+
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+            }
+
+            td:before {
+                content: attr(data-title);
+                position: absolute;
+                left: 10px;
+                top: 6px;
+                font-weight: bold;
+            }
+        }
+    </style>
+
+    <div class="main-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Location</th>
+                    <th>Event</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>March 10, 2024</td>
+                    <td>8:00 PM</td>
+                    <td>Riverfront Park</td>
+                    <td>Spring Fest</td>
+                </tr>
+                <tr>
+                    <td>April 22, 2024</td>
+                    <td>7:30 PM</td>
+                    <td>Downtown Bar & Grill</td>
+                    <td>Jazz & Blues Night</td>
+                </tr>
+                <tr>
+                    <td>June 15, 2024</td>
+                    <td>6:00 PM</td>
+                    <td>City Hall Plaza</td>
+                    <td>Summer Concert Series</td>
+                </tr>
+                <tr>
+                    <td>August 29, 2024</td>
+                    <td>8:30 PM</td>
+                    <td>Old Town Amphitheater</td>
+                    <td>Rock & Roll Revival</td>
+                </tr>
+                <tr>
+                    <td>October 3, 2024</td>
+                    <td>9:00 PM</td>
+                    <td>The Underground Club</td>
+                    <td>Halloween Bash</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="social-buttons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <footer>© 2024 The Cover Band</footer>
+</body>
+</html>

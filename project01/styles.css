@@ -3,13 +3,78 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background image */
+    background-image: url('pic/concert04.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar {
+    display: flex;
+    /* center the child elements horizontally */
+    justify-content: center;
+    /* centers the child elements vertically */
+    align-items: center; 
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar a {
+    display: flex;
+    float: none; /* Remove float as it's not needed with flexbox */
+    display: inline-block; /* Change display to inline-block or block as preferred */
+    color: white;
+    text-align: center;
+    padding: 28px;
+    text-decoration: none;
+    margin: 0;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar #selected {
+    color:black;
+    background-color:#ddd;
 }
 
 footer {
@@ -20,36 +85,6 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-.navbar {
-    background-color: #555;
-    overflow: hidden;
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.sidebar {
-    float: left;
-    width: 200px;
-    padding: 15px;
-}
-
-.main-content {
-    margin-left: 220px; /* Adjust based on sidebar width */
-    padding: 15px;
 }
 
 .social-buttons {
@@ -66,14 +101,16 @@ footer {
     font-size: 24px;
 }
 
-@media (max-width: 980px) {
-    .navbar a, .main-content, .sidebar {
-        float: none;
-        width: 100%;
-        text-align: center;
-        margin-left: 0;
-    }
-    .social-buttons {
-        right: 10px;
-    }
+@media (max-width: 768px) {
+    /* Styles for tablets */
+}
+
+@media (max-width: 480px) {
+    /* Styles for phones */
+}
+
+.main-content {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 15px;
 }

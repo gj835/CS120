@@ -3,28 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- I just name it the cover band, no idea what it means -->
     <title>The Cover Band</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- for social buttons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- For social icons -->
 </head>
 <body>
-    <header>The Cover Band</header>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="performers.html">Performers</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <div class="sidebar">
-        <!-- Sidebar content (e.g., upcoming shows, recent news) -->
-    </div>
+    <!-- fixed page elements -->
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="pic/logo_smail.png" alt="Band Logo" class="logo">
+            </a>
+            <div class="navbar">
+                <a href="index.html" id="selected">Home</a>
+                <a href="performers.html">Performers</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <style>
+        .main-content {
+            color: white;
+        }
+        
+        #intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            color: white;
+        }
+        
+        #intro img{
+            width: 300px;
+        }
+
+        .band-description {
+            font-size: 2.0em;
+            line-height: 1.5em;
+        }
+
+        #eventlist {
+            font-size: 2.0em;
+            line-height: 1.5em;
+        }
+
+        @media (max-width: 600px) {
+            .main-content {
+                flex-basis: 100%;
+            }
+        }
+        
+    </style>
     <div class="main-content">
         <!-- Main content specific to each page -->
+        <h1>The cover band</h3>
+        <div class="intro">
+            <img src="pic/concert02.jpg" algin="center">
+            <p class="band-description">
+                We are the cover band, a group of musicians who love to cover songs. 
+                We play a variety of music, from classic rock to modern pop. 
+                We are available for private events, weddings, and more. 
+                Contact us to book your event today!
+            </p>
+
+            <br/>
+            <p class="band-description">we can make arrangement for private events for: </p>
+            <ul id="eventlist">
+                <li>Weddings</li>
+                <li>Corporate events</li>
+                <li>Private parties</li>
+                <li>And more!</li>  
+            </ul>
+        </div>
+        
     </div>
+
+    <!-- fixed page elements -->
     <div class="social-buttons">
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
     </div>
+
+    <!-- fixed page elements -->
     <footer>© 2024 The Cover Band</footer>
 </body>
 </html>
