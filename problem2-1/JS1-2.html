@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS120 Jin Gan</title>
+</head>
+<body>
+    <!-- Ask the user to enter the value of a temperature in Fahrenheit. 
+        Display the temperature in Celsius in a popup. 
+        
+        Now ask for the temperature in Celsius 
+        and convert it to Fahrenheit 
+        and display the result in a popup. -->
+    <script>
+        // Fahrenheit to Celsius
+        function f2c(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9;
+        }
+    
+        // Celsius to Fahrenheit
+        function c2f(celsius) {
+            return (celsius * 9 / 5) + 32;
+        }
+    
+        // enter Fahrenheit
+        var f1 = prompt("Enter the temperature in Fahrenheit:");
+        // Convert to number and convert to Celsius
+        var c1 = f2c(Number(f1));
+        // Display in a popup
+        alert(f1 + "°F is " + c1.toFixed(2) + "°C");
+    
+        // enter Celsius
+        var c2 = prompt("Enter the temperature in Celsius:");
+        // Convert to number and convert to Fahrenheit
+        var f2 = c2f(Number(c2));
+        // Display in a popup
+        alert(c2 + "°C is " + f2.toFixed(2) + "°F");
+    </script>
+    
+</body>
+</html>

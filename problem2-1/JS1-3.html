@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS120 Jin Gan</title>
+</head>
+<body>
+    <!-- Create a program that gets two numbers 
+        and displays them on the page in order (smallest to largest). 
+        
+        You may not use arrays or a sort function 
+        (other than what you create yourself) -->
+
+    <script>
+        // first number
+        var firstNumber = prompt("Please enter the first number:");
+        // Convert to a number
+        firstNumber = Number(firstNumber);
+
+        // second number
+        var secondNumber = prompt("Please enter the second number:");
+        // Convert to a number
+        secondNumber = Number(secondNumber);
+
+        // Initialize a variable to hold the display message
+        var message;
+
+        if (firstNumber <= secondNumber) {
+            message = "Numbers in order: " + firstNumber + ", " + secondNumber;
+        } else if (firstNumber > secondNumber) {
+            message = "Numbers in order: " + secondNumber + ", " + firstNumber;
+        } 
+
+        // Create <p> to display the message
+        var paragraph = document.createElement("p");
+        paragraph.textContent = message;
+
+        // Append the paragraph to the body of the page
+        document.body.appendChild(paragraph);
+    </script>
+</body>
+</html>

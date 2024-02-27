@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS120 Jin Gan</title>
+</head>
+<body>
+    <!-- Problem 1:  
+        Ask the user separately for their first name and last name.  
+        (Use two calls to prompt()). 
+        
+        Display the response in a popup (alert): "Your name is <name>" filling in their full name. 
+        
+        Now ask the user for the number of children they have. 
+        
+        Display the number of children as a grammatically correct sentence 
+        ( “You have no children”, “You have 1 child” or “You have 2 children”, etc). 
+        
+        This display should be on the page. 
+    -->
+    <script>
+        // Ask for their first name
+        var firstName = prompt("Please enter your first name:");
+        // Ask for their last name
+        var lastName = prompt("Please enter your last name:");
+        // Display the full name in an alert
+        alert("Your name is " + firstName + " " + lastName);
+
+        // Ask the user for the number of children they have
+        var numberOfChildren = prompt("How many children do you have?");
+        // Convert numberOfChildren to integer
+        numberOfChildren = parseInt(numberOfChildren);
+
+        // Generate the correct message depend on the answer provided
+        var message = "";
+        if (numberOfChildren === 0) {
+            message = "You have no children.";
+        } else if (numberOfChildren === 1) {
+            message = "You have 1 child.";
+        } else {
+            message = "You have " + numberOfChildren + " children.";
+        }
+
+        // Create a <p></p> and add message to it
+        var p = document.createElement("p");
+        p.textContent = message;
+
+        // Append the paragraph to the body of the page
+        document.body.appendChild(p);
+    </script>
+</body>
+</html>

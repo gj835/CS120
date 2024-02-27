@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS120 Jin Gan</title>
+</head>
+<body>
+    <script>
+        // Ask for the start of the range
+        var startRange = prompt("Enter the start of the range:");
+        startRange = parseInt(startRange, 10);
+
+        // Ask for the end of the range
+        var endRange = prompt("Enter the end of the range:");
+        endRange = parseInt(endRange, 10);
+
+        var sum = 0;
+        var oddNumbers = "";
+
+        for (var i = startRange; i <= endRange; i++) {
+            // Check for odd number
+            if (i % 2 !== 0) { 
+                oddNumbers += i + " ";
+            }
+            sum += i; // Add the number to the sum
+        }
+
+        // Create <p> for odd numbers
+        var message = document.createElement("p");
+        message.textContent = "Odd numbers in the range: " + oddNumbers.trim();
+        document.body.appendChild(message);
+
+        // Create another <p> for the sum
+        var sumParagraph = document.createElement("p");
+        sumParagraph.textContent = "Sum of numbers in the range: " + sum;
+        document.body.appendChild(sumParagraph);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS120 Jin Gan</title>
+</head>
+<body>
+    <script>
+        // Function to display the times table for a number
+        function displayTimesTable(number) {
+            var timesTable = ""; // Initialize an empty string to hold the times table
+
+            // Generate the times table
+            for (var i = 1; i <= 12; i++) {
+                timesTable += number + " x " + i + " = " + (number * i) + "<br>";
+            }
+
+            // Create <p>
+            var paragraph = document.createElement("p");
+            paragraph.innerHTML = timesTable;
+
+            // Append the paragraph to the body of the page
+            document.body.appendChild(paragraph);
+        }
+
+        // Test the function with 3
+        displayTimesTable(3);
+    </script>
+</body>
+</html>
