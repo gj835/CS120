@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem Set 2-2 CS120 Jin Gan</title>
+</head>
+<body>
+    <h1>Problem 6</h1>
+
+    <select id="statesList" size="10">
+        <!-- Options will be dynamically added here -->
+    </select>
+    <button id="addState">Add State</button>
+
+    <ol id="selectedStates" style="border: 1px solid; margin-top: 20px;">
+        <!-- Selected states will appear here as a numbered list -->
+    </ol>
+    <button id="clearStates">Clear States</button>
+
+    <script>
+        // Array of states
+        var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia"];
+        // Array to keep track of selected states
+        var selectedStates = [];
+
+        // Function to initialize or restore the states list
+        function initStatesList() {
+            var select = document.getElementById('statesList');
+            select.innerHTML = ''; // Clear existing options
+            states.forEach(function(state) {
+                if (!selectedStates.includes(state)) { // Add state if it's not in selectedStates
+                    var option = document.createElement('option');
+                    option.value = state;
+                    option.textContent = state;
+                    select.appendChild(option);
+                }
+            });
+            select.selectedIndex = 0;
+        }
+
+        // Function to add the selected state to the div and remove it from the select list
+        function addSelectedState() {
+            var select = document.getElementById('statesList');
+            var selectedState = select.value;
+            if (selectedState) {
+                selectedStates.push(selectedState); // Add to the list of selected states
+                var list = document.getElementById('selectedStates');
+                var listItem = document.createElement('li');
+                listItem.textContent = selectedState;
+                list.appendChild(listItem);
+                initStatesList(); // Refresh the states list to remove the added state
+            }
+        }
+
+        // Function to clear the selected states from the div and restore the select list
+        function clearStates() {
+            selectedStates = []; // Reset selected states
+            document.getElementById('selectedStates').innerHTML = ''; // Clear the list
+            initStatesList(); // Restore the original states list
+        }
+
+        // Assign event handlers
+        window.onload = function() {
+            initStatesList(); // Initialize the states list
+            document.getElementById('addState').onclick = addSelectedState;
+            document.getElementById('clearStates').onclick = clearStates;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem Set 2-2 CS120 Jin Gan</title>
+</head>
+<body>
+    <h1>Problem 3</h1>
+    
+    <form>
+        <input type="text" id="userName" placeholder="Enter your name">
+        <!-- Add 3 buttons labeled "Hello", "Good Bye", and "Greetings" -->
+        <button type="button" onclick="speak('Hello')">Hello</button>
+        <button type="button" onclick="speak('Good Bye')">Good Bye</button>
+        <button type="button" onclick="speak('Greetings')">Greetings</button>
+    </form>
+    
+    <script>
+        // Create a function called "speak" with a parameter called "prefix"
+        function speak(prefix) {
+            // Get the user's name from the input box
+            var name = document.getElementById('userName').value;
+            // Display an alert with the prefix followed by the name
+            alert(prefix + " " + name);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem Set 2-2 CS120 Jin Gan</title>
+</head>
+<body>
+    <h1>Problem 5</h1>
+
+    <!-- Create the select element and set its size attribute to display as a list -->
+    <select id="statesList" size="10">
+        <!-- Options will be added here using JavaScript -->
+    </select>
+    <button id="addState">Add State</button>
+
+    <div id="selectedStates" style="border: 1px solid; margin-top: 20px;">
+        <!-- Selected states will appear here -->
+    </div>
+    <button id="clearStates">Clear States</button>
+
+    <script>
+        // Array of states
+        var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia"];
+
+        // Function to initialize the states list
+        function initStatesList() {
+            var select = document.getElementById('statesList');
+            states.forEach(function(state) {
+                var option = document.createElement('option');
+                option.value = state;
+                option.textContent = state;
+                select.appendChild(option);
+            });
+            // Set the first item as selected by default
+            select.selectedIndex = 0;
+        }
+
+        // Function to add the selected state to the div
+        function addSelectedState() {
+            var selectedState = document.getElementById('statesList').value;
+            var div = document.getElementById('selectedStates');
+            div.innerHTML += selectedState + "<br>"; // Add the selected state to the div
+        }
+
+        // Function to clear the selected states from the div
+        function clearStates() {
+            document.getElementById('selectedStates').innerHTML = ""; // Clear the div
+        }
+
+        // Assign event handlers
+        window.onload = function() {
+            initStatesList(); // Initialize the states list
+            document.getElementById('addState').onclick = addSelectedState; // Assign event handler to add state button
+            document.getElementById('clearStates').onclick = clearStates; // Assign event handler to clear states button
+        };
+    </script>
+</body>
+</html>

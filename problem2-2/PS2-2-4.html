@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem Set 2-2 CS120 Jin Gan</title>
+</head>
+<body>
+    <h1>Problem 4</h1>
+
+    <!-- Copy the form from Problem 3 with the input box and the three buttons -->
+    <form>
+        <input type="text" id="userName" placeholder="Enter your name">
+        <!-- Buttons without the 'onclick' attribute -->
+        <button type="button">Hello</button>
+        <button type="button">Good Bye</button>
+        <button type="button">Greetings</button>
+    </form>
+    
+    <script>
+        // Function to display greeting without parameter
+        function speak() {
+            // Get the user's name from the input box
+            var name = document.getElementById('userName').value;
+            // Use the text of the clicked button as the greeting prefix
+            var prefix = this.innerText; // 'this' refers to the button that was clicked
+            // Display an alert with the prefix followed by the name
+            alert(prefix + " " + name);
+        }
+
+        // Assign the event handler within window.onload
+        window.onload = function() {
+            // Get all buttons in the form
+            var buttons = document.querySelectorAll('form button');
+            // Add the speak event to each button
+            buttons.forEach(function(button) {
+                button.onclick = speak;
+            });
+        };
+    </script>
+</body>
+</html>
