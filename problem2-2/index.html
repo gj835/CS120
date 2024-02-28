@@ -13,5 +13,52 @@
         <li><a href="PS2-2-5.html" target="_blank">Problem 5</a></li>
         <li><a href="PS2-2-6.html" target="_blank">Problem 6</a></li>
     </ul>
+
+    <br>
+
+    <p style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;"><strong><strong>Problem 1:&nbsp;</strong></strong></p>
+    <ul style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;">
+        <li>Use prompt() to get a sentence from the user</li>
+        <li>Use split to create an array in which each element of the array is a word in the sentence (you may assume spaces between words)</li>
+        <li>Use the length property of the array to determine the number of words in the sentence</li>
+        <li>Display the number of words.</li>
+    </ul>
+    <p style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;"><strong><strong>Problem 2:&nbsp;</strong></strong></p>
+    <ul style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;">
+        <li>Create a string with several names separated by a comma - for example, &nbsp;&quot;Pat, Chris, Marlon, Ferncroft, Assunta&quot;</li>
+        <li>Using ONLY string or array methods, &nbsp;display the names as a numbered list. &nbsp;You may NOT use a for or a while loop.</li>
+    </ul>
+    <p style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;">&nbsp; &nbsp;Hint1: &nbsp;first turn the string into an array<br>&nbsp; &nbsp;Hint2: Think about the repetitive part of a list - ie, &lt;li&gt;anb&lt;/li&gt;<br>&nbsp; &nbsp;Hint3: Think about methods of the array object that iterate through the array</p>
+    <p style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;"><strong><strong>Problem 3:&nbsp;</strong></strong></p>
+    <ul style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;">
+        <li>Create a form with an input box to get a user&apos;s name</li>
+        <li>Add 3 buttons to the form - the buttons should be labeled: &nbsp;&quot;Hello&quot;, &quot;Good Bye&quot;, and &quot;Greetings&quot; respectively</li>
+        <li>Do not include a submit button with the form</li>
+        <li>Create a function called &quot;speak&quot; that has a parameter called &quot;prefix&quot;<br>speak(prefix)</li>
+        <li>speak() should pop up an alert that displays the prefix followed by the name in the input box<br>for example, if the user enters &quot;Bill&quot; in the input box, speak(&quot;Hello&quot;) should pop up: &nbsp;&quot;Hello Bill&quot;</li>
+        <li>Assign an event handler to each button using the speak function. &nbsp;Do this within the HTML code for the button</li>
+    </ul>
+    <p style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;"><strong><strong>Problem 4:&nbsp;</strong></strong></p>
+    <ul style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;">
+        <li>Copy the form from Problem 3 with the input box and the three buttons</li>
+        <li>Rework the speak() event handler such that it does NOT have a parameter. &nbsp;Instead, use the clicked button text to get the greeting prefix</li>
+        <li>Assign the event handler within window.onload</li>
+    </ul>
+    <p style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;"><strong><strong>Problem 5:&nbsp;</strong></strong></p>
+    <ul style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;">
+        <li>Create a &lt;select&gt; element as a list (not a dropdown element- hint, set the size attribute of the &lt;select&gt; ).</li>
+        <li>The &lt;select&gt; should display a list of at least 10 states - use Javascript to create the &lt;option&gt; elements using an array of the states. By default, the first item should be selected.</li>
+        <li>Adjacent to the &lt;select&gt; list is a button labeled &quot;Add State&quot;</li>
+        <li>Below the list is a div with a border and a button labeled &quot;Clear States&quot;</li>
+        <li>When the user clicks &quot;Add State&quot;, the selected state in the list should appear below in the div. &nbsp;The user may continue to add more states to the list in the div</li>
+        <li>When the user clicks &quot;Clear States&quot; the div should be emptied</li>
+    </ul>
+    <p style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;"><strong><strong>Extra Credit (15 points):</strong></strong></p>
+    <p style="text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;">Add the following functionality to Problem 5:&nbsp;</p>
+    <ol style="list-style-type: decimal;text-align: start;color: rgb(45, 59, 69);background-color: rgb(255, 255, 255);font-size: 16px;">
+        <li>When &quot;Add State&quot; is clicked and a state is moved to the div, that state should disappear from the &lt;select&gt; list.</li>
+        <li>When &quot;Clear States&quot; is clicked, the &lt;select&gt;list should be restored.</li>
+        <li>The states in the &lt;div&gt; should appear as a numbered list</li>
+    </ol>
 </body>
 </html>
