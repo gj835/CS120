@@ -9,6 +9,7 @@
     <form>
         <input type="text" id="userName" placeholder="Enter your name">
         <!-- Add 3 buttons labeled "Hello", "Good Bye", and "Greetings" -->
+        <!-- Assign an event handler to each button using the speak function. -->
         <button type="button" onclick="speak('Hello')">Hello</button>
         <button type="button" onclick="speak('Good Bye')">Good Bye</button>
         <button type="button" onclick="speak('Greetings')">Greetings</button>
@@ -19,7 +20,7 @@
         function speak(prefix) {
             // Get the user's name from the input box
             var name = document.getElementById('userName').value;
-            // Display an alert with the prefix followed by the name
+            // pop up an alert that displays the prefix followed by the name in the input box
             alert(prefix + " " + name);
         }
     </script>

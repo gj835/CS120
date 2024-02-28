@@ -14,15 +14,10 @@
         var namesArray = namesString.split(", ");
         
         // Transform each name into a list item and number them
-        var listItems = namesArray.map(function(name, index) {
-            return (index + 1) + ". <li>" + name + "</li>";
-        });
-        
-        // Join the list items into a single string and wrap with UL tags
-        var list = "<ul>" + listItems.join("") + "</ul>";
+        var listItems = namesArray.map(name => `<li>${name}</li>`).join('');
         
         // Display the names as a numbered list
-        document.write(list);
+        document.write('<ol>' + listItems + '</ol>');
     </script>
 </body>
 </html>

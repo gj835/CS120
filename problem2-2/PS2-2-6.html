@@ -6,61 +6,70 @@
 <body>
     <h1>Problem 6</h1>
 
+    <!-- Create a <select> element as a list -->
     <select id="statesList" size="10">
-        <!-- Options will be dynamically added here -->
+        <!-- Options will be added here -->
     </select>
+
     <button id="addState">Add State</button>
 
-    <ol id="selectedStates" style="border: 1px solid; margin-top: 20px;">
-        <!-- Selected states will appear here as a numbered list -->
-    </ol>
+    <div id="selectedStates" style="border: 1px solid; margin-top: 20px;">
+        <!-- Selected states will appear here in a numbered list format -->
+    </div>
+
     <button id="clearStates">Clear States</button>
 
     <script>
-        // Array of states
+        // A list of at least 10 states
         var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia"];
-        // Array to keep track of selected states
-        var selectedStates = [];
+        // A list to store all the selected states, a global variable alway keeping record
+        var selected = [];
 
-        // Function to initialize or restore the states list
+        // Function to initialize the states list
+        // It will add all the states to the list except the ones that are already selected.
         function initStatesList() {
             var select = document.getElementById('statesList');
             select.innerHTML = ''; // Clear existing options
             states.forEach(function(state) {
-                if (!selectedStates.includes(state)) { // Add state if it's not in selectedStates
+                if (!selected.includes(state)) {
                     var option = document.createElement('option');
                     option.value = state;
                     option.textContent = state;
                     select.appendChild(option);
                 }
             });
+            // By default, the first item should be selected.
             select.selectedIndex = 0;
         }
 
-        // Function to add the selected state to the div and remove it from the select list
+        // add the selected state to the div
         function addSelectedState() {
             var select = document.getElementById('statesList');
             var selectedState = select.value;
             if (selectedState) {
-                selectedStates.push(selectedState); // Add to the list of selected states
-                var list = document.getElementById('selectedStates');
-                var listItem = document.createElement('li');
-                listItem.textContent = selectedState;
-                list.appendChild(listItem);
-                initStatesList(); // Refresh the states list to remove the added state
+                selected.push(selectedState);
+                updateSelectedStatesDiv();
+                initStatesList(); // Refresh the states list
             }
         }
 
-        // Function to clear the selected states from the div and restore the select list
+        function updateSelectedStatesDiv() {
+            var listHTML = '<ol>';
+            selected.forEach(function(state) {
+                listHTML += '<li>' + state + '</li>';
+            });
+            listHTML += '</ol>';
+            document.getElementById('selectedStates').innerHTML = listHTML;
+        }
+
         function clearStates() {
-            selectedStates = []; // Reset selected states
-            document.getElementById('selectedStates').innerHTML = ''; // Clear the list
+            selected = []; // Restore the selected list
+            document.getElementById('selectedStates').innerHTML = '';  // Clear the div
             initStatesList(); // Restore the original states list
         }
 
-        // Assign event handlers
         window.onload = function() {
-            initStatesList(); // Initialize the states list
+            initStatesList();
             document.getElementById('addState').onclick = addSelectedState;
             document.getElementById('clearStates').onclick = clearStates;
         };
