@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem Set 2-3 jQuery/JSON</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /* Add your styling here */
+        .song {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $.get('songs.json', function(songs) { // 'songs' is already a JavaScript object
+                var content = '';
+                songs.forEach(function(song) {
+                    content += '<div class="song"><strong>' 
+                               + song.title + '</strong><br>Artist: ' 
+                               + song.artist + '<br>Genre: ' 
+                               + song.genres.join(', ') 
+                               + '<br>Released ' 
+                               + song.year + '</div>';
+                });
+                $('#songsContainer').html(content);
+            }, 'json'); // Ensure jQuery treats the response as JSON
+        });
+    </script>
+</head>
+<body>
+    <h1>Part 2</h1>
+    <div id="songsContainer">
+        <!-- Songs will be loaded here -->
+    </div>
+</body>
+</html>

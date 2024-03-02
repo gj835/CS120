@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Part 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Load the JSON data from songs.json and process it
+            $.getJSON('songs.json', function(songs) {
+                var genres = new Set(); // Use a Set to store unique genres
+
+                // Extract genres and populate the dropdown
+                songs.forEach(song => {
+                    song.genres.forEach(genre => {
+                        genres.add(genre); // Add each genre to the Set
+                    });
+                });
+
+                genres.forEach(genre => {
+                    $('#genreSelect').append($('<option>', { 
+                        value: genre,
+                        text : genre 
+                    }));
+                });
+
+                // Assign event handler to the filter button
+                $('#filterButton').click(function() {
+                    var selectedGenre = $('#genreSelect').val();
+                    var matchingSongs = songs.filter(song => song.genres.includes(selectedGenre));
+                    var content = matchingSongs.map(song => `<div>${song.title}</div>`).join('');
+                    
+                    $('#resultsContainer').html(content);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Filter Songs by Genre</h1>
+    <form id="genreForm">
+        <label for="genreSelect">Choose a genre:</label>
+        <select id="genreSelect">
+            <option selected="selected">Choose one</option>
+        </select>
+        <button type="button" id="filterButton">Filter</button>
+    </form>
+    <div id="resultsContainer">
+        <!-- Filtered songs will be displayed here -->
+    </div>
+</body>
+</html>

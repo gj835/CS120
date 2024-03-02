@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem Set 2-3 jQuery/JSON</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // JSON object at the top of the file
+        var songList = [
+                { "title": "Imagine", "artist": "John Lennon", "year": 1971, "genres": ["Rock", "Pop"] },
+                { "title": "Bohemian Rhapsody", "artist": "Queen", "year": 1975, "genres": ["Rock", "Opera"] },
+                { "title": "Hotel California", "artist": "Eagles", "year": 1977, "genres": ["Rock"] },
+                { "title": "Shake It Off", "artist": "Taylor Swift", "year": 2014, "genres": ["Pop"] },
+                { "title": "Smells Like Teen Spirit", "artist": "Nirvana", "year": 1991, "genres": ["Rock", "Grunge"] },
+                { "title": "Rolling in the Deep", "artist": "Adele", "year": 2010, "genres": ["Pop", "Soul"] },
+                { "title": "Ring of Fire", "artist": "Johnny Cash", "year": 1963, "genres": ["Country"] },
+                { "title": "Hound Dog", "artist": "Elvis Presley", "year": 1956, "genres": ["Rock", "Blues"] },
+                { "title": "Thriller", "artist": "Michael Jackson", "year": 1982, "genres": ["Pop", "Funk", "Disco"] },
+                { "title": "Sweet Child o' Mine", "artist": "Guns N' Roses", "year": 1987, "genres": ["Rock", "Hard Rock"] }
+            ];
+
+        $(document).ready(function() {
+            // Convert the JSON object to a string for displaying
+            var jsonString = JSON.stringify(songList, null, 2); // Pretty print
+
+            // Display the JSON string on the webpage
+            $('#songList').text(jsonString);
+        });
+    </script>
+</head>
+<body>
+    <h1>Part 1</h1>
+    <pre id="songList"></pre> <!-- The JSON string will be displayed here -->
+</body>
+</html>
