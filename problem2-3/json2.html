@@ -5,14 +5,13 @@
     <title>Problem Set 2-3 jQuery/JSON</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        /* Add your styling here */
         .song {
             margin-bottom: 20px;
         }
     </style>
     <script>
         $(document).ready(function() {
-            $.get('songs.json', function(songs) { // 'songs' is already a JavaScript object
+            $.get('songs.json', function(songs) {
                 var content = '';
                 songs.forEach(function(song) {
                     content += '<div class="song"><strong>' 
@@ -30,7 +29,7 @@
 <body>
     <h1>Part 2</h1>
     <div id="songsContainer">
-        <!-- Songs will be loaded here -->
+        <!-- Songs will be here -->
     </div>
 </body>
 </html>

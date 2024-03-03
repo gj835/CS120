@@ -19,16 +19,16 @@
             ];
 
         $(document).ready(function() {
-            // Convert the JSON object to a string for displaying
-            var jsonString = JSON.stringify(songList, null, 2); // Pretty print
+            // Convert the JSON object to a string
+            var jsonString = JSON.stringify(songList, null, 2);
 
-            // Display the JSON string on the webpage
+            // Display JSON string on the webpage
             $('#songList').text(jsonString);
         });
     </script>
 </head>
 <body>
     <h1>Part 1</h1>
-    <pre id="songList"></pre> <!-- The JSON string will be displayed here -->
+    <pre id="songList"></pre> <!-- The JSON string will be here -->
 </body>
 </html>

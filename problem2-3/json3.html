@@ -10,10 +10,10 @@
             $.getJSON('songs.json', function(songs) {
                 var genres = new Set(); // Use a Set to store unique genres
 
-                // Extract genres and populate the dropdown
+                // Extract genres from the songs and add them to the Set
                 songs.forEach(song => {
                     song.genres.forEach(genre => {
-                        genres.add(genre); // Add each genre to the Set
+                        genres.add(genre);
                     });
                 });
 
@@ -45,8 +45,9 @@
         </select>
         <button type="button" id="filterButton">Filter</button>
     </form>
+    <br/>
     <div id="resultsContainer">
-        <!-- Filtered songs will be displayed here -->
+        <!-- Filtered songs will be here -->
     </div>
 </body>
 </html>
