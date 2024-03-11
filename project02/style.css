@@ -1,16 +1,18 @@
 body, html {
-    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f3f4f6;
+    font-family: Arial, sans-serif;
 }
 
 #wordleGrid {
     display: grid;
     grid-template-columns: repeat(5, 50px);
     grid-gap: 10px;
+    margin-bottom: 20px; /* Space between grid and input */
 }
 
 .wordleCell {
@@ -23,4 +25,8 @@ body, html {
     border: 2px solid #d3d6da;
     font-size: 20px;
     text-transform: uppercase;
+}
+
+#guessInput, #guessButton {
+    margin: 5px;
 }

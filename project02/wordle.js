@@ -12,6 +12,7 @@ const wordList = ['APPLE', 'BERRY', 'CHIEF', 'DRAFT', 'EARTH',
                   'ZEBRA', 'ALERT', 'BLOOM', 'CRISP', 'DRINK'];
                   
 const solution = wordList[Math.floor(Math.random() * wordList.length)];
+console.log(solution); // For testing purposes
 let attempts = 0;
 
 // Create the game grid.
@@ -21,9 +22,16 @@ for (let i = 0; i < 30; i++) { // 6 attempts of 5 letters each
     wordleGrid.appendChild(cell);
 }
 
+document.getElementById('guessInput').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        document.getElementById('guessButton').click();
+    }
+});
+
 // Handle the guess submission.
 guessButton.addEventListener('click', () => {
     const guess = guessInput.value.toUpperCase();
+
     if (guess.length !== 5) {
         message.textContent = 'Please enter a 5-letter word.';
         return;
