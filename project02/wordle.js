@@ -13,22 +13,24 @@ const wordList = ['APPLE', 'BERRY', 'CHIEF', 'DRAFT', 'EARTH',
                   
 const solution = wordList[Math.floor(Math.random() * wordList.length)];
 console.log(solution); // For testing purposes
+
 let attempts = 0;
 
-// Create the game grid.
-for (let i = 0; i < 30; i++) { // 6 attempts of 5 letters each
+// word grid
+for (let i = 0; i < 30; i++) { // create 30 cells arragend by css ".wordleCell"
     const cell = document.createElement('div');
     cell.className = 'wordleCell';
     wordleGrid.appendChild(cell);
 }
 
+// link enter key to guess button
 document.getElementById('guessInput').addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
         document.getElementById('guessButton').click();
     }
 });
 
-// Handle the guess submission.
+// processing when submit a guess
 guessButton.addEventListener('click', () => {
     const guess = guessInput.value.toUpperCase();
 
@@ -52,7 +54,7 @@ guessButton.addEventListener('click', () => {
         }
 
         if (guess === solution) {
-            message.textContent = 'Congratulations! You guessed the word!';
+            message.textContent = 'Congratulations! You got it!';
         } else {
             message.textContent = '';
             attempts++;
@@ -61,5 +63,5 @@ guessButton.addEventListener('click', () => {
             }
         }
     }
-    guessInput.value = ''; // Clear input after guess
+    guessInput.value = ''; // clear input after guess
 });
