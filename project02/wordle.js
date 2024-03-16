@@ -70,8 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
             this.updateAverageGuessesDisplay();
         }
     };
-
-    gameState.loadStatistics();
+    
+    // game start
+    gameState.loadStatistics(); // Load the player data
     gameState.initialize();
 
     const checkGuess = (guess) => {
@@ -170,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gameState.initialize();
     });
 
+    // associate the enter key with the guess button
     guessInput.addEventListener('keyup', (event) => {
         if (event.key === 'Enter') {
             guessButton.click();
