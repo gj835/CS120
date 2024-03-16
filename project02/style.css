@@ -12,7 +12,7 @@ body, html {
     display: grid;
     grid-template-columns: repeat(5, 50px);
     grid-gap: 10px;
-    margin-bottom: 20px; /* Space between grid and input */
+    margin-bottom: 20px;
 }
 
 .wordleCell {
@@ -27,6 +27,89 @@ body, html {
     text-transform: uppercase;
 }
 
-#guessInput, #guessButton {
+.usedLetter {
+    padding: 5px;
+    margin: 2px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+
+#usedLettersBoard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+}
+
+#averageGuesses {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#guessInput {
     margin: 5px;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#guessButton, #restartButton {
+    margin: 0 5px;
+    flex: 1;
+    min-width: 100px;
+}
+
+#guessButton {
+    display: block;
+    margin: 5px;
+    padding: 10px;
+    background-color: #bababa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#guessButton:hover {
+    background-color: #9a9a9a;
+}
+
+#restartButton {
+    display: none;
+    margin: 5px;
+    padding: 10px;
+    background-color: #ebfd24;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#restartButton:hover {
+    background-color: #a9b646;
+}
+
+#resetButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#resetButton:hover {
+    background-color: #d32f2f;
 }

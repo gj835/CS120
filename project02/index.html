@@ -9,7 +9,17 @@
     <div id="wordleGrid"></div>
     <div id="message"></div>
     <input type="text" id="guessInput" maxlength="5">
-    <button id="guessButton">Guess</button>
+    <div id="buttonContainer">
+        <button id="guessButton">Guess</button>
+        <button id="restartButton" style="display: none;">Restart</button>
+    </div>
+    
+    <div>
+        <p style="text-align: center; margin-top: 20px; font-size: 1.2em;">Used Letters:</p>
+    </div>
+    <div id="usedLettersBoard"></div>
+    <div id="averageGuesses"></div>
+    <button id="resetButton">Reset</button>
     <script src="wordle.js"></script>
 </body>
 </html>
